@@ -15,7 +15,7 @@
         <h3>by branavan</h3>
         <form>
             <div class="amount">
-                <input type="text" value="1">
+                <input oninput='updateConversion()' type="text" placeholder="Enter your conversion amount here..." value="">
             </div>
             <div class="main-box">
                 <div class="original">
@@ -34,7 +34,6 @@
                     </div>
                 </div>   
                 <div class="result">Retrieving rate...</div>      
-                <button>Get Exchange Rate</button>   
             </div>
         </form>
     </div>

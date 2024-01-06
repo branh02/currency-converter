@@ -45,3 +45,15 @@ swapBttn.addEventListener("click", () => {
     });
     getExchangeRate();
 })
+
+function updateConversion() {
+    if (amount.value && !isNaN(amount.value)) {
+        getExRate();
+    } else {
+        exRateTxt.innerText = "Please enter a valid amount";
+    }
+}
+
+amount.addEventListener('input', updateConversion);
+originalCur.addEventListener('change', updateConversion);
+newCur.addEventListener('change', updateConversion);
